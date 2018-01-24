@@ -34,3 +34,7 @@ it('can remove dinosaur by type', function(){
   park.removeByType("Velociraptor")
   assert.strictEqual(park.dinosaurs.length, 3);
 })
+
+it('can get dinosaurs by offspring number', function(){
+  assert.deepEqual(park.getByOffspringAmount(2), ["Velociraptor", "Velociraptor", "Utahraptor"])
+})

@@ -19,6 +19,22 @@ Park.prototype.removeByType = function(type){
   // }
 }
 
+Park.prototype.getByOffspringAmount = function(numberOfOffspring){
+  var dinos = [];
+  for(let dino of this.dinosaurs){
+    if (dino.offspring >= numberOfOffspring){
+      dinos.push(dino.type);
+    }
+  }
+  return dinos;
+  // var dinos =  this.dinosaurs.filter(dino => dino.offspring >= int);
+  // var names = [];
+  // for(let dino of dinos){
+  //   names.push(dino.name);
+  // }
+  // return names;
+}
+
 
 
 module.exports = Park;
